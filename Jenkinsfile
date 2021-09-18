@@ -5,10 +5,16 @@ pipeline {
         jdk 'jdk8'
     }
     stages {
-        stage ('Initialize') {
-            steps {
-                sh 'echo hello'
-            }
-        }
+        stage("Compile") {          	 
+   			 steps {               	 
+   				 sh "mvn compile"          	 
+             }     	 
+   		}     	 
+   	    stage("Unit test") {          	 
+   		    steps {               	 
+   				     sh "mvn test"          	 
+   			     }     	 
+   		     }	 
+   	    }
     }
 }
