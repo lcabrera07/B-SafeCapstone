@@ -10,6 +10,10 @@ pipeline {
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
+                    echo "WORKSPACE = ${WORKSPACE}"
+                    echo "BUILD_DISPLAYNAME = ${BUILD_DISPLAYNAME}"
+                    echo "BUILD_NUMBER = ${BUILD_NUMBER}"
+                    echo "BUILD_ID = ${BUILD_ID}"
                 '''
             }
         }
